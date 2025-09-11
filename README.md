@@ -1,0 +1,3 @@
+# My Competitive Programming Journey
+
+This is the repo to store my CP journey's codes...
