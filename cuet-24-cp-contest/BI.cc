@@ -20,20 +20,23 @@ int main()
         cin >> arr[i];
     }
 
-    int minSum = 100 * k;
     int startOfConsecutivePlanks = 0;
 
-    for (int i = 0; i <= n - k; i++)
+    int sum = 0;
+    for (int i = 0; i < k; i++)
     {
-        int sum = 0;
-        for (int j = i; j - i < k; j++)
-        {
-            sum += arr[j];
-        }
+        sum += arr[i];
+    }
+    int minSum = sum;
+    int firstIndex = 0;
+    for (int i = k; i < n; i++)
+    {
+        sum = sum - arr[firstIndex] + arr[i];
+        firstIndex++;
         if (sum < minSum)
         {
             minSum = sum;
-            startOfConsecutivePlanks = i;
+            startOfConsecutivePlanks = firstIndex;
         }
     }
 
