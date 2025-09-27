@@ -5,3 +5,6 @@
 *.out
 *.o
 *.exe
+
+.vscode/
+!.vscode/tasks.json
